@@ -1,0 +1,55 @@
+quiz = [
+    {
+        "question": "What is the capital of France?",
+        "options": ["A. Berlin", "B. Madrid", "C. Paris", "D. Rome"],
+        "answer": "C"
+    },
+    {
+        "question": "What is the capital of Canada?",
+        "options": ["A. Ottawa", "B. Toronto", "C. Montreal", "D. Calgary"],
+        "answer": "A"
+    },
+{ "question": "What is the capital of Australia?",
+        "options": ["A. Sydney", "B. Melbourne", "C. Perth", "D. Canberra"],
+        "answer": "D"
+        },
+        { "question": "What is the capital of China?",
+        "options": ["A. Shanghai", "B. Beijing", "C. Guangzhou", "D. Wuhan"],
+        "answer": "B"
+        },
+        {
+         "question": "What is the capital of Brazil?",
+        "options": ["A. Rio de Janerio", "B. Brasilia", "C. Sao Paulo", "D. Salvador"],
+        "answer": "A"
+        }
+]
+for q in quiz:
+    print(q["question"])
+    for option in q["options"]:
+        print(option)
+
+score = 0  
+
+for q in quiz:
+    print("\n" + q["question"])
+    for option in q["options"]:
+        print(option)
+    answer = input("Enter your answer (A/B/C/D): ").upper()
+    
+    if answer == q["answer"]:
+        print("✅ Correct!")
+        score += 1
+    else:
+        print(f"❌ Wrong! The correct answer was {q['answer']}")
+        
+print("\n--- Quiz Completed ---")
+print(f"Your score: {score}/{len(quiz)}")
+percentage = (score / len(quiz)) * 100
+print(f"Percentage: {percentage:.2f}%")
+
+if percentage == 100:
+    print("🏆 Excellent! Perfect Score!")
+elif percentage >= 60:
+    print("🎉 Good job! You passed.")
+else:
+    print("😅 Keep practicing!")
