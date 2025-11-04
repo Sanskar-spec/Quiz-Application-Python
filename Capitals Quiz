@@ -20,7 +20,7 @@ quiz = [
         {
          "question": "What is the capital of Brazil?",
         "options": ["A. Rio de Janerio", "B. Brasilia", "C. Sao Paulo", "D. Salvador"],
-        "answer": "A"
+        "answer": "B"
         }
 ]
 for q in quiz:
